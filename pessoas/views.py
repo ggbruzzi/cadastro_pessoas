@@ -1,10 +1,12 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
-def index(request):
-    return render(request, 'index.html')
+class IndexView(TemplateView):
+    template_name = 'index.html'
 
-def criar(request):
-    return render(request, 'index2.html')
+class CriarView(TemplateView):
+    template_name = 'index2.html'
 
-def editar(request):
-    return render(request, 'index3.html')
+class EditarView(TemplateView):
+    template_name = 'index3.html'
+
+

@@ -1,9 +1,9 @@
 from django.urls import path
 
-from . import views
+from .views import IndexView,CriarView,EditarView
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('criar', views.criar, name='criar'),
-    path('editar', views.editar, name='editar')
+   path('', IndexView.as_view(), name=''),
+   path('criar', CriarView.as_view(), name='criar'),
+   path('editar', EditarView.as_view(), name='editar')
 ]
