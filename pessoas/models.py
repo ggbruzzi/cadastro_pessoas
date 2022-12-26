@@ -9,6 +9,5 @@ class Pessoa(models.Model):
     email = models.EmailField()
     apelido = models.CharField(max_length=100,blank=True)
     observação = models.CharField(max_length=100,blank=True)
-
     def __str__(self):
         return self.nome_pessoa
