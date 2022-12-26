@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import IndexView,CriarView,EditarView,PessoaCreate
+from .views import IndexView,PessoaCreate
 
 urlpatterns = [
    path('', IndexView.as_view(), name=''),

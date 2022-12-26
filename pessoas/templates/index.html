@@ -19,5 +19,26 @@
     <form action="cadastrar" method="get">
     <button style="background-color: white;color: #025C78; height: 30px;border-radius: 9px; border: none; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">Cadastre-se</button>
     </form>
+
+    <table >
+        <tr>
+          <th>Nome Completo</th>
+          <th>Idade</th>
+          <th>Data de nascimento</th>          
+          <th>Email</th>
+          <th>Apelido</th>
+          <th>Observação</th>
+        </tr>
+        {% if pessoas %}
+        {% for Pessoa in object_list %} 
+        <tr>
+           <td>
+            {{ pessoa.nome_pessoa }}
+           </td> 
+        </tr>
+        {% endfor %}
+        {% else %}
+        {% endif %}
+      </table>
 </body>
 </html>
