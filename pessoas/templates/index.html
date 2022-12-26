@@ -20,19 +20,25 @@
     <button style="background-color: white;color: #025C78; height: 30px;border-radius: 9px; border: none; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">Cadastre-se</button>
     </form>
 
-    <table >
+    <table align="center">
         <tr>
-          <th>Nome Completo</th>
-          <th>Idade</th>
-          <th>Data de nascimento</th>          
-          <th>Email</th>
-          <th>Apelido</th>
-          <th>Observação</th>
+          <th style="border-bottom: 1px solid white;">Nome Completo</th>
+          <th style="border-bottom: 1px solid white;">Idade</th>
+          <th style="border-bottom: 1px solid white;">Data de nascimento</th>          
+          <th style="border-bottom: 1px solid white;">Email</th>
+          <th style="border-bottom: 1px solid white;">Apelido</th>
+          <th style="border-bottom: 1px solid white;">Observação</th>
+          <th style="border-bottom: 1px solid white;">Opções</th>
         </tr>
         
         {% for pessoa in object_list %} 
         <tr>
-            <td>{{ pessoa.nome_pessoa }}</td>
+            <td style="border-bottom: 1px solid white;">{{ pessoa.nome_pessoa }}</td>
+            <td style="border-bottom: 1px solid white;">{{ pessoa.idade }}</td>
+            <td style="border-bottom: 1px solid white;">{{ pessoa.data_nascimento }}</td>
+            <td style="border-bottom: 1px solid white;">{{ pessoa.email }}</td>
+            <td style="border-bottom: 1px solid white;">{{ pessoa.apelido }}</td>
+            <td style="border-bottom: 1px solid white;">{{ pessoa.observacao }}</td>
         </tr>
         {% empty %}
         <tr>
