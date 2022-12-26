@@ -4,7 +4,5 @@ from .views import IndexView,CriarView,EditarView,PessoaCreate
 
 urlpatterns = [
    path('', IndexView.as_view(), name=''),
-   path('criar', CriarView.as_view(), name='criar'),
-   path('editar', EditarView.as_view(), name='editar'),
    path('cadastrar', PessoaCreate.as_view(), name='cadastrar')
 ]
