@@ -17,7 +17,7 @@
     <img src="{% static 'img/logo.png' %}" width="100" alt="">
 
     <form action="cadastrar" method="get">
-    <button style="background-color: white;color: #025C78; height: 30px;border-radius: 9px; border: none; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">Cadastre-se</button>
+    <button style="background-color: white;color: #025C78; height: 30px;border-radius: 9px; border: none; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">Cadastrar</button>
     </form>
 
     <table align="center">
@@ -28,7 +28,6 @@
           <th style="border-bottom: 1px solid white;">Data de nascimento</th>          
           <th style="border-bottom: 1px solid white;">Email</th>
           <th style="border-bottom: 1px solid white;">Apelido</th>
-          <th style="border-bottom: 1px solid white;">Observação</th>
           <th style="border-bottom: 1px solid white;">Opções</th>
         </tr>
         
@@ -40,9 +39,8 @@
             <td style="border-bottom: 1px solid white;">{{ pessoa.data_nascimento }}</td>
             <td style="border-bottom: 1px solid white;">{{ pessoa.email }}</td>
             <td style="border-bottom: 1px solid white;">{{ pessoa.apelido }}</td>
-            <td style="border-bottom: 1px solid white;">{{ pessoa.observacao }}</td>
             <td>
-                <a href="">Editar</a>
+                <a style="color: black;" href="{% url 'editar' pessoa.pk %}">Editar</a>
             </td>
         </tr>
         {% empty %}
