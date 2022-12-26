@@ -29,16 +29,17 @@
           <th>Apelido</th>
           <th>Observação</th>
         </tr>
-        {% if pessoas %}
-        {% for Pessoa in object_list %} 
+        
+        {% for pessoa in object_list %} 
         <tr>
-           <td>
-            {{ pessoa.nome_pessoa }}
-           </td> 
+            <td>{{ pessoa.nome_pessoa }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td>Nenhum campos registrados</td>
         </tr>
         {% endfor %}
-        {% else %}
-        {% endif %}
-      </table>
+
+    </table>
 </body>
 </html>
